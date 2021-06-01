@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/core": "^4.0.3",
     "@types/graphql": "^14.2.3",
-    "@types/jest": "^26.0.23",
     "@types/node": "^15.6.1",
     "@types/react": "^17.0.8",
     "@types/react-bootstrap": "^0.32.25",
@@ -13,6 +13,9 @@
     "@types/react-router-dom": "^5.1.7",
     "aws-amplify": "^4.0.3",
     "bootstrap": "^5.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "^27.0.3",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
@@ -24,10 +27,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.23",
+    "ts-jest": "^27.0.2"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

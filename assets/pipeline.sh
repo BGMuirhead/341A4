@@ -6,12 +6,14 @@ then
 fi 
 
 echo 'Comment Check Has Passed'
+echo ' '
 
-#npm install
-#npm run build
-
-
-
+npm install
+echo ' '
+npm run build
+echo ' '
+npm test
+echo ' '
 cd ../
 git add .
 git commit -m $1

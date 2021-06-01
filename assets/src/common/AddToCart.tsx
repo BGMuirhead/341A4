@@ -1,7 +1,7 @@
 import React from 'react';
 import { API } from 'aws-amplify';
 import { Redirect } from 'react-router';
-import { Glyphicon } from 'react-bootstrap';
+import  Glyphicon  from 'react-bootstrap';
 
 interface AddToCartProps {
   bookId: string;
@@ -68,7 +68,7 @@ class AddToCart extends React.Component<AddToCartProps, AddToCartState> {
         disabled={this.state.loading}
         type="button" 
         onClick={this.onAddToCart}>
-        {this.state.loading && <Glyphicon glyph="refresh" className="spinning" />}
+        {this.state.loading && 1/*<Glyphicon glyph="refresh" className="spinning" />/ commented out as was causing errors    */} 
         {this.props.variant === "buyAgain" ? `Buy again` : `Add to cart`}
       </button>
     );
