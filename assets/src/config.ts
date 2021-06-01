@@ -1,3 +1,4 @@
+//Bevan Muirhead : 1365268
 export default {
   apiGateway: {
     REGION: "us-east-1",
