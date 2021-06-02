@@ -64,16 +64,16 @@ export default class PastPurchases extends Component<PastPurchasesProps, PastPur
         <CategoryNavBar />
         <div className="well-bs col-md-12">
           {this.state.userInfo && <div className="white-box no-margin-top">
-            <h3>{`Hello ${this.state.userInfo.attributes.email}!`}</h3>
+            <h3 id="helloheader">{`Hello ${this.state.userInfo.attributes.email}!`}</h3>
           </div>}
           <div className="white-box">
-            <h3>Past purchases</h3>
+            <h3 id="PurchasesHeader">Past purchases</h3>
           </div>
           {!this.state.isLoading && this.state.orders && this.state.orders
             .sort((order1, order2) => order2.orderDate - order1.orderDate)
             .map(order => 
               <div className="order-date" key={order.orderId}>
-                <h4>{`Order date: ${this.getPrettyDate(order.orderDate)}`}</h4>
+                <h4 id="dateHeader">{`Order date: ${this.getPrettyDate(order.orderDate)}`}</h4>
                 {order.books.map((book) => <PurchasedProductRow order={book} key={book.bookId} />)}
               </div>)
           }

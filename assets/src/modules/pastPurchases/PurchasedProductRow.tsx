@@ -57,9 +57,9 @@ export class PurchasedProductRow extends React.Component<PurchasedProductRowProp
             <img className="media-object product-thumb" src={this.state.book.cover} alt={`${this.state.book.name} covers`} />
           </div>
           <div className="media-body">
-            <h3 className="media-heading">{this.state.book.name}
+            <h3 id="book" className="media-heading">{this.state.book.name}
               <div className="pull-right margin-1">
-                <small>{`${this.props.order.quantity} @ ${this.state.book.price}`}</small>
+                <small >{`${this.props.order.quantity} @ ${this.state.book.price}`}</small>
               </div>
             </h3>
             <small>{this.state.book.category}</small>

@@ -3,7 +3,7 @@ import "../../common/styles/productRow.css";
 import { API } from "aws-amplify";
 import StarRating from "../../common/starRating/StarRating";
 import FriendRecommendations from "../../common/friendRecommendations/FriendRecommendations";
-import { Glyphicon } from "react-bootstrap";
+import  Glyphicon  from "react-bootstrap";
 import { Book } from "../bestSellers/BestSellerProductRow";
 
 export interface Order {
@@ -92,7 +92,7 @@ export class CartProductRow extends React.Component<CartProductRowProps, CartPro
                   <input type="number" className="form-control" placeholder="Quantity" defaultValue={this.props.order.quantity.toString()} onChange={this.onQuantityUpdated} min={1} />
                   <span className="input-group-btn">
                     <button className="btn btn-black" type="button" onClick={this.onRemove} disabled={this.state.removeLoading}>
-                      {this.state.removeLoading && <Glyphicon glyph="refresh" className="spinning" />} 
+                      {this.state.removeLoading && 1/*<Glyphicon glyph="refresh" className="spinning" />*/} 
                       Remove
                     </button>
                   </span>
