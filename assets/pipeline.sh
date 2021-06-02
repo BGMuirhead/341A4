@@ -9,10 +9,10 @@ echo 'Comment Check Has Passed'
 echo ' '
 
 #npm install
-echo ' '
+#echo ' '
 
 #npm run build
-echo ' '
+#echo ' '
 
 npm test
 echo ' '
