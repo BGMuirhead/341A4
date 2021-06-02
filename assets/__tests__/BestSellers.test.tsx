@@ -4,6 +4,19 @@ import React from 'react';
 import BestSellers from "../src/modules/bestSellers/BestSellers";
 
 import { shallow  } from 'enzyme';
+import BestSellerProductRow  from '../src/modules/bestSellers/BestSellerProductRow';
+
+
+var book1 =
+    {
+        
+        bookId: "abc",
+        quantity: 1,
+        price: 5,
+        name:"name",
+        
+    };
+
 
 it("Is Header Correct",() =>{
     
@@ -12,18 +25,14 @@ it("Is Header Correct",() =>{
     expect(wrapper.find('#PageHeader').text()).toEqual("Top 20 best sellers")
 })
 
-/*
-it("Is Header Correct",() =>{
+it("Book Title and Price Renders Correctly", ()=>{
     
 
-    const wrapper = shallow(<BestSellers/>);
-    expect(wrapper.find("h3").text()).toEqual("Top 20 best sellers"); 
-
-
+    const wrapper = shallow(<BestSellerProductRow bookId={book1.bookId} key={book1.bookId} />);
+    wrapper .setState({book:book1})
+    expect(wrapper.find('#book').text()).toEqual("name$5");
     
+
 })
-
-*/
-
 
 

@@ -41,6 +41,8 @@ var book1 =
         
     };
 
+
+//tests the purchase header renders
 it("Is Purchase Header Correct",() =>{
     
 
@@ -49,6 +51,7 @@ it("Is Purchase Header Correct",() =>{
 })
 
 
+//tests the hello message is rendered with the user email
 it("Is Hello Message Correct",() =>{
     
 
@@ -58,6 +61,7 @@ it("Is Hello Message Correct",() =>{
 })
 
 
+//tests the order date is formatted and rendered 
 it("Order Date Displayed Correctly",() =>{
     
 
@@ -68,7 +72,9 @@ it("Order Date Displayed Correctly",() =>{
     
 })
 
-it("Book Type, Quantity, and Price Displayed Correctly", ()=>{
+
+// tests the book data is rendered
+it("Book Title, Quantity, and Price Displayed Correctly", ()=>{
     
 
         const wrapper = shallow(<PurchasedProductRow order={book1} key={book1.bookId}/>);
