@@ -8,8 +8,8 @@ fi
 echo 'Comment Check Has Passed'
 echo ' '
 
-#npm install
-#echo ' '
+npm install
+echo ' '
 
 #npm run build
 #echo ' '
